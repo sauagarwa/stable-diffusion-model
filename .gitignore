@@ -1,0 +1,6 @@
+astronaut_rides_horse.png
+diffusion_model
+model/*.zip
+model/*.mar
+.ipynb_checkpoints/
+model/.ipynb_checkpoints/

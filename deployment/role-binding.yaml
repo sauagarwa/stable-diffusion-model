@@ -1,0 +1,15 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: stable-diffusion-rb
+subjects:
+  - kind: ServiceAccount
+    name: {{workbench_name}}
+    namespace: {{namespace}}
+  - kind: ServiceAccount
+    name: pipeline-runner-dspa
+    namespace: {{namespace}}
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: stable-diffusion-role
